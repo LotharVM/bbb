@@ -16,8 +16,9 @@ export const Card = ({ data, isModal }: Props) => {
   const pathname = usePathname();
   const router = useRouter();
 
-  if (!isModal && pathname === `/${data.id}`)
-    return <div className="aspect-[3/4]" />;
+  if (!isModal && pathname === `/${data.id}`) {
+    return <div className="h-dvh md:h-auto" />;
+  }
 
   const details = getDogDetails(data);
   const ratio = isModal ? `${data.image.width}/${data.image.height}` : "4/3";
@@ -27,7 +28,9 @@ export const Card = ({ data, isModal }: Props) => {
       whileHover={!isModal ? { scale: 0.975 } : {}}
       layoutId={data.id.toString()}
       transition={{ duration: 0.5, ease: [0.5, 0.6, 0.3, 1] }}
-      className="rounded-xl bg-grey-100 border-grey-500 border overflow-hidden relative h-auto md:h-full pointer-events-auto"
+      className={`rounded-xl bg-grey-100 border-grey-500 border overflow-hidden relative min-h-full h-auto md:h-full pointer-events-auto ${
+        isModal ? "rounded-none md:rounded-xl border-none" : ""
+      }`}
     >
       {isModal && (
         <button className="absolute top-4 left-4 bg-white rounded-full p-2 z-10 w-10 h-10 flex items-center justify-center text-3xl md:hidden">
