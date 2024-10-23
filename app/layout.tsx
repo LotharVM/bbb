@@ -12,7 +12,6 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: "Bakken, Bæck & Barks",
-  description: "For everything dog related",
 };
 
 export default function RootLayout({

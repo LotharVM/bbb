@@ -1,7 +1,6 @@
 import { DogBreed } from "@/@types/doggos";
 
 export const getDogDetails = (dog: DogBreed) => {
-  console.log(dog);
   const details = [
     {
       title: "Breed",
