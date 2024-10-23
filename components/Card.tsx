@@ -28,8 +28,8 @@ export const Card = ({ data, isModal }: Props) => {
       whileHover={!isModal ? { scale: 0.975 } : {}}
       layoutId={data.id.toString()}
       transition={{ duration: 0.5, ease: [0.5, 0.6, 0.3, 1] }}
-      className={`rounded-xl bg-grey-100 border-grey-500 border overflow-hidden relative min-h-full h-auto md:h-full pointer-events-auto ${
-        isModal ? "rounded-none md:rounded-xl border-none" : ""
+      className={`rounded-xl bg-grey-100 border-grey-500 border overflow-hidden relative min-h-full h-auto md:h-full ${
+        isModal ? "overflow-visible md:overflow-hidden" : ""
       }`}
     >
       {isModal && (
