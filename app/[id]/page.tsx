@@ -1,7 +1,6 @@
 import { Card } from "@/components/Card";
 import { fetchSingleDogBreed } from "@/api/fetchSingleDogBreed";
 import { notFound } from "next/navigation";
-import { MotionDiv } from "@/components/Motion";
 import Backdrop from "@/components/Backdrop";
 import { PageProps } from "@/.next/types/app/page";
 import { fetchAllDogBreeds } from "@/api/fetchAllDogBreeds";

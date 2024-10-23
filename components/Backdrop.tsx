@@ -1,13 +1,12 @@
 "use client";
 
-import React from "react";
-import { MotionDiv } from "./Motion";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 
 const Backdrop = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
   return (
-    <MotionDiv
+    <motion.div
       className="fixed inset-0 bg-black/40 z-20"
       onClick={() => router.back()}
       style={{
@@ -18,7 +17,7 @@ const Backdrop = ({ children }: { children: React.ReactNode }) => {
       exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
     >
       {children}
-    </MotionDiv>
+    </motion.div>
   );
 };
 
