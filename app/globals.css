@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: theme(colors.grey.300);
+  --foreground: theme(colors.grey.700);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: theme(colors.grey.700);
+    --foreground: theme(colors.grey.300);
+  }
+}
+
+body {
+  @apply bg-background text-foreground antialiased font-body;
+}
+
+.container {
+  @apply max-w-screen-2xl mx-auto px-4 md:px-6;
+}
